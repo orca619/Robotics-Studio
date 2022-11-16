@@ -9,4 +9,12 @@ except ServoTimeoutError as e:
     print(f"Servo {e.id_} is not responding. Exiting...")
     quit()
     
-servo1.move(120)
+int x = 0
+
+while True:
+    if x %2 == 0: 
+        servo1.move(120)
+    else if x % 2 == 1:
+        servo1.move(60)
+    
+    x += 1
