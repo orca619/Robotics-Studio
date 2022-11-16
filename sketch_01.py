@@ -15,9 +15,9 @@ x = 0
 while True:
     if x %2 == 0: 
         servo1.move(120)
-        sleep(2)
+        time.sleep(2)
     elif x % 2 == 1:
         servo1.move(60)
-        sleep(2)
+        time.sleep(2)
         
     x += 1
