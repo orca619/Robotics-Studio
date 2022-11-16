@@ -19,7 +19,7 @@ while True:
     elif x % 3 == 1:
         servo1.move(60)
         time.sleep(1)
-    elif x % 3 == 1:
+    elif x % 3 == 2:
         servo1.move(180)
         time.sleep(1)
     
