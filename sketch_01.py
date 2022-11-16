@@ -13,11 +13,14 @@ except ServoTimeoutError as e:
 x = 0
 
 while True:
-    if x %2 == 0: 
+    if x % 3 == 0: 
         servo1.move(120)
-        time.sleep(2)
-    elif x % 2 == 1:
+        time.sleep(1)
+    elif x % 3 == 1:
         servo1.move(60)
-        time.sleep(2)
-        
+        time.sleep(1)
+    elif x % 3 == 1:
+        servo1.move(180)
+        time.sleep(1)
+    
     x += 1
