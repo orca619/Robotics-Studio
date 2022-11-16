@@ -9,7 +9,7 @@ except ServoTimeoutError as e:
     print(f"Servo {e.id_} is not responding. Exiting...")
     quit()
     
-int x = 0
+x = 0
 
 while True:
     if x %2 == 0: 
