@@ -1,4 +1,4 @@
-from lx16a import *
+from pylx16a.lx16a import *
 
 LX16A.initialize("/dev/ttyUSB0", 0.1)
 
