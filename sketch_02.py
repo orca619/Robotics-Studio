@@ -42,7 +42,7 @@ while True:
     servo7.move(60)
     time.sleep(.001)
     servo8.move(60)
-    time.sleep(.001)
+    time.sleep(.5)
     servo1.move(120)
     time.sleep(.001)
     servo2.move(120)
@@ -58,7 +58,7 @@ while True:
     servo7.move(120)
     time.sleep(.001)
     servo8.move(120)
-    time.sleep(.001)
+    time.sleep(.5)
 
 # while True:
 #     if x % 6 == 0: 
