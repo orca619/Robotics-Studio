@@ -24,13 +24,41 @@ except ServoTimeoutError as e:
     print(f"Servo {e.id_} is not responding. Exiting...")
     quit()
 
-while True:
+x = 0
+
+while x == 0:
+    servo1.move(100)
+    time.sleep(.1)
+    servo2.move(100)
+    time.sleep(.1)
+    servo3.move(100)
+    time.sleep(.1)
+    servo4.move(100)
+    time.sleep(.1)
+    servo5.move(100)
+    time.sleep(.1)
+    servo6.move(100)
+    time.sleep(.1)
+    servo7.move(100)
+    time.sleep(.1)
+    servo8.move(100)
+    time.sleep(.5)
+    
     servo1.move(120)
+    time.sleep(.1)
     servo2.move(120)
+    time.sleep(.1)
     servo3.move(120)
+    time.sleep(.1)
     servo4.move(120)
+    time.sleep(.1)
     servo5.move(120)
+    time.sleep(.1)
     servo6.move(120)
+    time.sleep(.1)
     servo7.move(120)
+    time.sleep(.1)
     servo8.move(120)
     time.sleep(.5)
+    
+    x += 1
