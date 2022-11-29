@@ -29,6 +29,6 @@ t = 0
 
 while True:
     angle = 120 + 30 * math.sin(t * math.pi)
-    servo5.move(angle)
+    servo1.move(angle)
     t += .01
     time.sleep(.005)
