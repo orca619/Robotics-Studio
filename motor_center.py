@@ -1,5 +1,6 @@
 from lx16a import *
 import time
+import math
 
 LX16A.initialize("/dev/ttyUSB0", 0.1)
 
@@ -23,42 +24,18 @@ try:
 except ServoTimeoutError as e:
     print(f"Servo {e.id_} is not responding. Exiting...")
     quit()
-
-x = 0
-
-while x == 0:
-    servo1.move(100)
-    time.sleep(.1)
-    servo2.move(100)
-    time.sleep(.1)
-    servo3.move(100)
-    time.sleep(.1)
-    servo4.move(100)
-    time.sleep(.1)
-    servo5.move(100)
-    time.sleep(.1)
-    servo6.move(100)
-    time.sleep(.1)
-    servo7.move(100)
-    time.sleep(.1)
-    servo8.move(100)
-    time.sleep(.5)
     
-    servo1.move(120)
-    time.sleep(.1)
-    servo2.move(120)
-    time.sleep(.1)
-    servo3.move(120)
-    time.sleep(.1)
-    servo4.move(120)
-    time.sleep(.1)
-    servo5.move(120)
-    time.sleep(.1)
-    servo6.move(120)
-    time.sleep(.1)
-    servo7.move(120)
-    time.sleep(.1)
-    servo8.move(120)
-    time.sleep(.5)
-    
-    x += 1
+t = 0
+
+while t <= 2:
+    angle = 120 + 30 * math.sin(t * math.pi)
+    servo1.move(angle)
+    servo2.move(angle)
+    servo3.move(angle)
+    servo4.move(angle)
+    servo5.move(angle)
+    servo6.move(angle)
+    servo7.move(angle)
+    servo8.move(angle)
+    t += .01
+    time.sleep(.005)
