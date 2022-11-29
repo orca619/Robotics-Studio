@@ -26,7 +26,7 @@ except ServoTimeoutError as e:
     
 x = 0
 
-while True:
+while x==0:
     servo1.move(60)
     time.sleep(.5)
     servo2.move(60)
@@ -59,6 +59,7 @@ while True:
     time.sleep(.5)
     servo8.move(120)
     time.sleep(.5)
+    x+=1
 
 # while True:
 #     if x % 6 == 0: 
