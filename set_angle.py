@@ -35,3 +35,5 @@ while t <= 2:
     servo4.move(deg)        
     t += .01
     time.sleep(.005)
+    
+servo4.move(90)
