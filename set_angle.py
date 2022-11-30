@@ -50,5 +50,5 @@ while temp > angle:
     temp -= 1
     time.sleep(.05)
 
-servo4.get_last_instant_move_hw()
+print(servo4.get_last_instant_move_hw())
 print(temp)
