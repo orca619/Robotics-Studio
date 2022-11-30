@@ -49,3 +49,5 @@ while temp > angle:
     servo4.move(temp)
     temp -= 1
     time.sleep(.05)
+    
+print(temp)
