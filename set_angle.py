@@ -40,7 +40,12 @@ print(deg)
 
 temp = 120
 
-while temp != angle:
+while temp < angle:
     servo4.move(temp)
-    temp = temp + (angle - 120) / 200
+    temp += 1
+    time.sleep(.005)
+    
+while temp > angle:
+    servo4.move(temp)
+    temp -= 1
     time.sleep(.005)
