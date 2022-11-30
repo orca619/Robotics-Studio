@@ -25,39 +25,13 @@ except ServoTimeoutError as e:
     print(f"Servo {e.id_} is not responding. Exiting...")
     quit()
     
-servoNum = input("Enter servo number you wish to set: ")
 angle = input("Enter desired motor angle: ")
-print(servoNum)
+print(angle)
     
 t = 0
 
 while t <= 2:
-    if servoNum == 1:
-        deg = 120 + 30 * math.sin(t * math.pi)
-        servo1.move(deg)
-    elif servoNum == 2:
-        deg = 120 + 30 * math.sin(t * math.pi)
-        servo2.move(deg)
-    elif servoNum == 3:
-        deg = 120 + 30 * math.sin(t * math.pi)
-        servo3.move(deg)
-    elif servoNum == 4:
-        deg = 120 + 30 * math.sin(t * math.pi)
-        servo4.move(deg)
-    elif servoNum == 5:
-        deg = 120 + 30 * math.sin(t * math.pi)
-        servo5.move(deg)
-    elif servoNum == 6:
-        deg = 120 + 30 * math.sin(t * math.pi)
-        servo6.move(deg)
-    elif servoNum == 7:
-        deg = 120 + 30 * math.sin(t * math.pi)
-        servo7.move(deg)
-    elif servoNum == 8:
-        deg = 120 + 30 * math.sin(t * math.pi)
-        servo8.move(deg)
-    else:
-        print("ERROR")
-        
+    deg = 120 + 30 * math.sin(t * math.pi)
+    servo4.move(deg)        
     t += .01
     time.sleep(.05)
