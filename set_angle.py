@@ -26,8 +26,8 @@ except ServoTimeoutError as e:
     quit()
     
 servoNum = input("Enter servo number you wish to set: ")
+angle = input("Enter desired motor angle: ")
 print(servoNum)
-angle = input("Enter desired motor angle :")
     
 t = 0
 
