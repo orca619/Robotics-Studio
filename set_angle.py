@@ -34,4 +34,4 @@ while t <= 2:
     deg = 120 + 30 * math.sin(t * math.pi)
     servo4.move(deg)        
     t += .01
-    time.sleep(.05)
+    time.sleep(.005)
