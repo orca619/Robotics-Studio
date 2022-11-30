@@ -36,4 +36,11 @@ while t <= 2:
     t += .01
     time.sleep(.005)
     
-servo4.move(90)
+print(deg)
+
+temp = 120
+
+while temp != angle:
+    servo4.move(temp)
+    temp = temp + (angle - 120) / 200
+    time.sleep(.005)
