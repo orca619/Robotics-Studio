@@ -79,7 +79,7 @@ while temp > angle3:
     temp -= 1
     time.sleep(.05)
     
-angle4 = int(input("Enter desired motor angle: "))
+angle4 = int(input("Enter desired motor angle for servo4: "))
 print(angle4)
 
 atAngle4 = servo4.get_last_instant_move_hw()[0]
@@ -97,7 +97,7 @@ while temp > angle4:
     temp -= 1
     time.sleep(.05)
     
-angle5 = int(input("Enter desired motor angle: "))
+angle5 = int(input("Enter desired motor angle for servo5: "))
 print(angle5)
 
 atAngle5 = servo5.get_last_instant_move_hw()[0]
@@ -115,7 +115,7 @@ while temp > angle5:
     temp -= 1
     time.sleep(.05)
     
-angle6 = int(input("Enter desired motor angle: "))
+angle6 = int(input("Enter desired motor angle for servo6: "))
 print(angle6)
 
 atAngle6 = servo6.get_last_instant_move_hw()[0]
@@ -133,7 +133,7 @@ while temp > angle6:
     temp -= 1
     time.sleep(.05)
     
-angle7 = int(input("Enter desired motor angle: "))
+angle7 = int(input("Enter desired motor angle for servo7: "))
 print(angle7)
 
 atAngle7 = servo7.get_last_instant_move_hw()[0]
@@ -151,7 +151,7 @@ while temp > angle7:
     temp -= 1
     time.sleep(.05)
     
-angle8 = int(input("Enter desired motor angle: "))
+angle8 = int(input("Enter desired motor angle for servo8: "))
 print(angle8)
 
 atAngle8 = servo8.get_last_instant_move_hw()[0]
