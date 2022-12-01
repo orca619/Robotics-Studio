@@ -25,10 +25,10 @@ except ServoTimeoutError as e:
     print(f"Servo {e.id_} is not responding. Exiting...")
     quit()
     
-atAngle1 = servo1.get_last_instant_move_hw()[0]
-atAngle4 = servo4.get_last_instant_move_hw()[0]
+# atAngle1 = servo1.get_last_instant_move_hw()[0]
+# atAngle4 = servo4.get_last_instant_move_hw()[0]
 
-temp = atAngle1
+temp = servo1.get_last_instant_move_hw()[0]
 
 while temp < 120:
     servo1.move(temp)
