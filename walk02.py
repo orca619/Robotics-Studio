@@ -45,7 +45,7 @@ home6 = 122
 start2 = home2
 start6 = home6
 
-home3 = 116
+home3 = 116 + 90
 home7 = 122
 start3 = home3
 start7 = home7
