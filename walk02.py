@@ -40,12 +40,12 @@ start4 = home4 + 30
 start5 = home5 + 30
 start8 = home8 + 30
 
-home2 = 126 - 90
+home2 = 126
 home6 = 122
 start2 = home2
 start6 = home6
 
-home3 = 116 + 90
+home3 = 116
 home7 = 122
 start3 = home3
 start7 = home7
@@ -175,8 +175,8 @@ while True:
     servo5.move(deg5)
     servo8.move(deg8)
     
-    #if math.cos(theta) > 0:
-        #servo2.move(deg2)
+    if math.cos(theta) > 0:
+        servo2.move(deg2)
                    
     time.sleep(.025)
     t += 1
