@@ -62,7 +62,12 @@ while temp > start4:
     servo4.move(temp)
     temp -= .5
     time.sleep(.025)
-    
-atAngle = servo4.get_last_instant_move_hw()[0]
-print("currently at ")
-print(atAngle)
+
+t = 0
+
+while True:
+    deg = 120 - 30 * math.cos(t*2*math.pi/120)
+    servo1.move(deg)
+    servo4.move(deg)
+    time.sleep(.025)
+    t += 1
