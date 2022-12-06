@@ -175,8 +175,8 @@ while True:
     servo5.move(deg5)
     servo8.move(deg8)
     
-    if math.cos(theta) > 0:
-        servo2.move(deg2)
+    #if math.cos(theta) > 0:
+        #servo2.move(deg2)
                    
     time.sleep(.025)
     t += 1
