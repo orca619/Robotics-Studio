@@ -35,10 +35,10 @@ home1 = 112
 home4 = 108
 home5 = 106
 home8 = 112
-start1 = home1
-start4 = home4
-start5 = home5
-start8 = home8
+start1 = home1 + 30
+start4 = home4 + 30
+start5 = home5 + 30
+start8 = home8 + 30
 
 home2 = 126
 home6 = 122
@@ -102,18 +102,89 @@ while temp > start8:
     servo8.move(temp)
     temp -= .5
     time.sleep(.025)
+
+atAngle2 = servo2.get_last_instant_move_hw()[0]
+atAngle6 = servo6.get_last_instant_move_hw()[0]
+atAngle3 = servo3.get_last_instant_move_hw()[0]
+atAngle7 = servo7.get_last_instant_move_hw()[0]
+
+temp = atAngle2
+
+while temp < start2:
+    servo2.move(temp)
+    temp += .5
+    time.sleep(.025)
+    
+while temp > start2:
+    servo2.move(temp)
+    temp -= .5
+    time.sleep(.025)
+    
+temp = atAngle6
+    
+while temp < start6:
+    servo6.move(temp)
+    temp += .5
+    time.sleep(.025)
+    
+while temp > start6:
+    servo6.move(temp)
+    temp -= .5
+    time.sleep(.025)
+
+temp = atAngle3
+
+while temp < start3:
+    servo3.move(temp)
+    temp += .5
+    time.sleep(.025)
+    
+while temp > start3:
+    servo3.move(temp)
+    temp -= .5
+    time.sleep(.025)
+    
+temp = atAngle7
+    
+while temp < start7:
+    servo7.move(temp)
+    temp += .5
+    time.sleep(.025)
+    
+while temp > start7:
+    servo7.move(temp)
+    temp -= .5
+    time.sleep(.025)
     
 t = 0
 
 while True:
-    deg1 = home1 + 30 * math.sin(t*2*math.pi/120)
-    deg4 = home4 + 30 * math.sin(t*2*math.pi/120)
-    deg5 = home5 + 30 * math.sin(t*2*math.pi/120)
-    deg8 = home8 + 30 * math.sin(t*2*math.pi/120)
+    theta = t * 2 * math.pi / 120
+    
+    deg1 = home1 + 30 * math.cos(theta)
+    deg4 = home4 + 30 * math.cos(theta)
+    deg5 = home5 + 30 * math.cos(theta)
+    deg8 = home8 + 30 * math.cos(theta)
+    
+    deg2 = home2 - 90 * math.sin(theta)
+    deg6 = home6 + 30 * math.cos(t*2*math.pi/120)
+    deg7 = home7 + 30 * math.cos(t*2*math.pi/120)  
+    
     servo1.move(deg1)
     servo4.move(deg4)
     servo5.move(deg5)
     servo8.move(deg8)
     
+    if math.sin(theta) > 0 && math.cos(theta) > 0:
+        deg3 = home3 - 90 * math.sin(theta)
+        servo3.move(deg3)
+    elif math.sin(theta) < 0 && math.cos(theta) > 0:
+        servo2.move(deg2)
+    elif math.sin(theta) < 0 && math.cos(theta) < 0:
+        deg3 = home3 + 90 * (1 - math.sin(theta))
+        servo2.move(deg2)
+        servo3.move()
+    else:
+                   
     time.sleep(.025)
     t += 1
