@@ -31,7 +31,7 @@ except ServoTimeoutError as e:
 time.sleep(1)
 print("HERE WE GO!!!")
 
-atAngle = servo4.get_last_instant_move_hw()[0]
+atAngle = servo5.get_last_instant_move_hw()[0]
 print("currently at ")
 print(atAngle)
 
@@ -41,15 +41,15 @@ print(angle)
 temp = atAngle
 
 while temp < angle:
-    servo4.move(temp)
+    servo5.move(temp)
     temp += 1
     time.sleep(.05)
     
 while temp > angle:
-    servo4.move(temp)
+    servo5.move(temp)
     temp -= 1
     time.sleep(.05)
     
-atAngle = servo4.get_last_instant_move_hw()[0]
+atAngle = servo5.get_last_instant_move_hw()[0]
 print("currently at ")
 print(atAngle)
