@@ -40,6 +40,16 @@ start4 = home4
 start5 = home5
 start8 = home8
 
+home2 = 126
+home6 = 122
+start2 = home2
+start6 = home6
+
+home3 = 116
+home7 = 122
+start2 = home3
+start6 = home7
+
 atAngle1 = servo1.get_last_instant_move_hw()[0]
 atAngle4 = servo4.get_last_instant_move_hw()[0]
 atAngle5 = servo5.get_last_instant_move_hw()[0]
