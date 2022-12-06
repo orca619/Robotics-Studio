@@ -33,11 +33,17 @@ print("HERE WE GO!!!")
 
 home1 = 112
 home4 = 108
-start1 = 90
-start4 = 90
+home5 = 106
+home8 = 112
+start1 = home1
+start4 = home4
+start5 = home5
+start8 = home8
 
 atAngle1 = servo1.get_last_instant_move_hw()[0]
 atAngle4 = servo4.get_last_instant_move_hw()[0]
+atAngle5 = servo5.get_last_instant_move_hw()[0]
+atAngle8 = servo8.get_last_instant_move_hw()[0]
 
 temp = atAngle1
 
@@ -63,11 +69,41 @@ while temp > start4:
     temp -= .5
     time.sleep(.025)
 
+temp = atAngle5
+
+while temp < start5:
+    servo5.move(temp)
+    temp += .5
+    time.sleep(.025)
+    
+while temp > start5:
+    servo5.move(temp)
+    temp -= .5
+    time.sleep(.025)
+    
+temp = atAngle8
+    
+while temp < start8:
+    servo8.move(temp)
+    temp += .5
+    time.sleep(.025)
+    
+while temp > start8:
+    servo8.move(temp)
+    temp -= .5
+    time.sleep(.025)
+    
 t = 0
 
 while True:
-    deg = 120 - 30 * math.cos(t*2*math.pi/120)
-    servo1.move(deg)
-    servo4.move(deg)
+    deg1 = home1 + math.sin(t*2*math.pi/120)
+    deg4 = home4 + math.sin(t*2*math.pi/120)
+    deg5 = home5 + math.sin(t*2*math.pi/120)
+    deg8 = home8 + math.sin(t*2*math.pi/120)
+    servo1.move(deg1)
+    servo4.move(deg4)
+    servo5.move(deg5)
+    servo8.move(deg8)
+    
     time.sleep(.025)
     t += 1
