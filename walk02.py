@@ -47,8 +47,8 @@ start6 = home6
 
 home3 = 116
 home7 = 122
-start2 = home3
-start6 = home7
+start3 = home3
+start7 = home7
 
 atAngle1 = servo1.get_last_instant_move_hw()[0]
 atAngle4 = servo4.get_last_instant_move_hw()[0]
