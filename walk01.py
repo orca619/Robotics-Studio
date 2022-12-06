@@ -33,12 +33,12 @@ print(atAngle1)
 
 temp = atAngle1
 
-while temp < angle1:
+while temp < angle:
     servo1.move(temp)
     temp += 1
     time.sleep(.05)
     
-while temp > angle1:
+while temp > angle:
     servo1.move(temp)
     temp -= 1
     time.sleep(.05)
