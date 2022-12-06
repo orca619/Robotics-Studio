@@ -44,11 +44,3 @@ while temp > angle:
     servo1.move(temp)
     temp -= 1
     time.sleep(.05)
-
-angle = int(input("Enter desired motor angle for servo: "))
-print(angle)
-
-servo1.move(angle)
-
-atAngle = servo1.get_last_instant_move_hw()[0]
-print(atAngle)
