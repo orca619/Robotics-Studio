@@ -34,11 +34,12 @@ print("2")
 time.sleep(0.5)
 print("1")
 
-angle = 120
-
 atAngle1 = servo1.get_last_instant_move_hw()[0]
 print("currently at ")
 print(atAngle1)
+
+angle = int(input("Enter desired motor angle for servo1: "))
+print(angle)
 
 temp = atAngle1
 
