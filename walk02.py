@@ -184,7 +184,6 @@ while True:
         deg3 = home3 + 90 * (1 - math.sin(theta))
         servo2.move(deg2)
         servo3.move()
-    else:
                    
     time.sleep(.025)
     t += 1
