@@ -178,7 +178,6 @@ while True:
     if math.cos(theta) < 0 and math.sin(theta) > 0:
         deg3 = home3 - 90 * math.cos(theta)
         servo3.move(deg3)
-    elif math.cos(theta) < 0 and math.sin(theta) < 0:
     elif math.cos(theta) > 0 and math.sin(theta) < 0:
         servo2.move(deg2)
     elif math.cos(theta) > 0 and math.sin(theta) > 0:
