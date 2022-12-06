@@ -96,10 +96,10 @@ while temp > start8:
 t = 0
 
 while True:
-    deg1 = home1 + math.sin(t*2*math.pi/120)
-    deg4 = home4 + math.sin(t*2*math.pi/120)
-    deg5 = home5 + math.sin(t*2*math.pi/120)
-    deg8 = home8 + math.sin(t*2*math.pi/120)
+    deg1 = home1 + 30 * math.sin(t*2*math.pi/120)
+    deg4 = home4 + 30 * math.sin(t*2*math.pi/120)
+    deg5 = home5 + 30 * math.sin(t*2*math.pi/120)
+    deg8 = home8 + 30 * math.sin(t*2*math.pi/120)
     servo1.move(deg1)
     servo4.move(deg4)
     servo5.move(deg5)
