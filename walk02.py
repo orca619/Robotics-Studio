@@ -175,15 +175,8 @@ while True:
     servo5.move(deg5)
     servo8.move(deg8)
     
-    if math.cos(theta) < 0 and math.sin(theta) > 0:
-        deg3 = home3 - 90 * math.cos(theta)
-        servo3.move(deg3)
-    elif math.cos(theta) > 0 and math.sin(theta) < 0:
+    if math.cos(theta) > 0:
         servo2.move(deg2)
-    elif math.cos(theta) > 0 and math.sin(theta) > 0:
-        deg3 = home3 + 90 * (1 - math.cos(theta))
-        servo2.move(deg2)
-        servo3.move(deg3)
                    
     time.sleep(.025)
     t += 1
