@@ -25,8 +25,9 @@ except ServoTimeoutError as e:
     print(f"Servo {e.id_} is not responding. Exiting...")
     quit()
 
-angle = int(input("Enter desired motor angle for servo: "))
-print(angle)
+#angle = int(input("Enter desired motor angle for servo: "))
+#print(angle)
+angle = 60
 
 atAngle1 = servo1.get_last_instant_move_hw()[0]
 print(atAngle1)
