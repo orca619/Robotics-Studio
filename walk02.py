@@ -167,8 +167,7 @@ while True:
     deg8 = home8 + 30 * math.cos(theta)
     
     deg2 = home2 - 90 * math.cos(theta)
-    deg6 = home6 + 30 * math.cos(t*2*math.pi/120)
-    deg7 = home7 + 30 * math.cos(t*2*math.pi/120)  
+    deg6 = home6 - 90 * math.cos(theta)
     
     servo1.move(deg1)
     servo4.move(deg4)
@@ -177,6 +176,14 @@ while True:
     
     if math.cos(theta) > 0:
         servo2.move(deg2)
-                   
+        servo6.move(deg6)
+        
+        if math.sin(theta) > 0:
+            deg3 = home3 - 90 * math.cos(theta)
+            deg7 = home7 - 90 * math.sin(theta)
+            
+            servo3.move(deg3)
+            servo7.move(deg7)
+            
     time.sleep(.025)
     t += 1
