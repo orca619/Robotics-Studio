@@ -31,6 +31,7 @@ angle = 120
 time.sleep(4)
 
 atAngle1 = servo1.get_last_instant_move_hw()[0]
+print("currently at ")
 print(atAngle1)
 
 temp = atAngle1
@@ -44,3 +45,7 @@ while temp > angle:
     servo1.move(temp)
     temp -= 1
     time.sleep(.05)
+    
+atAngle1 = servo1.get_last_instant_move_hw()[0]
+print("currently at ")
+print(atAngle1)
