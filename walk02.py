@@ -40,7 +40,7 @@ start4 = home4 + 30
 start5 = home5 + 30
 start8 = home8 + 30
 
-home2 = 126
+home2 = 126 - 90
 home6 = 122
 start2 = home2
 start6 = home6
@@ -166,7 +166,7 @@ while True:
     deg5 = home5 + 30 * math.cos(theta)
     deg8 = home8 + 30 * math.cos(theta)
     
-    deg2 = home2 - 90 * math.sin(theta)
+    deg2 = home2 - 90 * math.cos(theta)
     deg6 = home6 + 30 * math.cos(t*2*math.pi/120)
     deg7 = home7 + 30 * math.cos(t*2*math.pi/120)  
     
@@ -175,13 +175,14 @@ while True:
     servo5.move(deg5)
     servo8.move(deg8)
     
-    if math.sin(theta) > 0 and math.cos(theta) > 0:
-        deg3 = home3 - 90 * math.sin(theta)
+    if math.cos(theta) < 0 and math.sin(theta) > 0:
+        deg3 = home3 - 90 * math.cos(theta)
         servo3.move(deg3)
-    elif math.sin(theta) < 0 and math.cos(theta) > 0:
+    elif math.cos(theta) < 0 and math.sin(theta) < 0:
+    elif math.cos(theta) > 0 and math.sin(theta) < 0:
         servo2.move(deg2)
-    elif math.sin(theta) < 0 and math.cos(theta) < 0:
-        deg3 = home3 + 90 * (1 + math.sin(theta))
+    elif math.cos(theta) > 0 and math.sin(theta) > 0:
+        deg3 = home3 + 90 * (1 - math.cos(theta))
         servo2.move(deg2)
         servo3.move(deg3)
                    
