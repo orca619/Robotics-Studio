@@ -177,10 +177,10 @@ while True:
     #servo6.move(deg6)
     
     if math.sin(theta) > 0:
-        deg3 = home3 - 80
+        deg3 = home3 - 20
         deg7 = home7 + 80
     elif math.sin(theta) < 0:
-        deg3 = home3 - 20
+        deg3 = home3 - 80
         deg7 = home7 + 20
     else:
         deg3 = home3 - 80
