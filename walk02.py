@@ -182,6 +182,9 @@ while True:
     elif math.sin(theta) < 0:
         deg3 = home3 - 20
         deg7 = home7 + 20
+    else:
+        deg3 = home3 - 80
+        deg7 = home7 + 80
     
     servo3.move(deg3)
     servo7.move(deg7)
