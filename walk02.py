@@ -173,8 +173,8 @@ while True:
     servo4.move(deg4)
     servo5.move(deg5)
     servo8.move(deg8)
-    #servo2.move(deg2)
-    #servo6.move(deg6)
+    servo2.move(deg2)
+    servo6.move(deg6)
     
     if math.sin(theta) > 0:
         deg3 = home3 - 20
