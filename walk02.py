@@ -159,7 +159,7 @@ while temp > start7:
 t = 0
 
 while True:
-    theta = t * 2 * math.pi / 85
+    theta = t * 2 * math.pi / 100
     
     deg1 = home1 + 30 * math.cos(theta)
     deg4 = home4 + 30 * math.cos(theta)
