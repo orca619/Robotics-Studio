@@ -173,8 +173,19 @@ while True:
     servo4.move(deg4)
     servo5.move(deg5)
     servo8.move(deg8)
-    servo2.move(deg2)
-    servo6.move(deg6)
+    #servo2.move(deg2)
+    #servo6.move(deg6)
+    
+    if math.sin(theta) > 0:
+        deg3 = home3 - 80
+        deg7 = home7 + 80
+    elif math.sin(theta) < 0:
+        deg3 = home3 - 20
+        deg7 = home7 + 20
+    
+    servo3.move(deg3)
+    servo7.move(deg7)
+    
             
     time.sleep(.025)
     t += 1
