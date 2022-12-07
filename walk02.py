@@ -166,13 +166,15 @@ while True:
     deg5 = home5 + 30 * math.cos(theta)
     deg8 = home8 + 30 * math.cos(theta)
     
-    deg2 = home2 - 90 * math.cos(theta)
-    deg6 = home6 - 90 * math.cos(theta)
+    deg2 = home2 - 30 * math.cos(theta)
+    deg6 = home6 - 30 * math.cos(theta)
     
     servo1.move(deg1)
     servo4.move(deg4)
     servo5.move(deg5)
     servo8.move(deg8)
+    servo2.move(deg2)
+    servo6.move(deg6)
             
     time.sleep(.025)
     t += 1
